@@ -1,27 +1,17 @@
-# Zboards
+# Final Fantasy 12 Zodiac Age Job Boards API
+
+## by [Adjectival](alexanderjacks.biz)
+
+Nascent MEAN stack RESTful API project. This means something to modern web developers, b/c we write so much code we start speaking in it, too.
+
+It's an online :cloud: reference :books: for anyone to build applications :iphone: with. Capitalism becomes a gift economy when there's enough free software, ya? :gift:
+
+## Dev Notes
+:construction: Under development aka WIP. Check back soon for more functionality.
+
+## Attribution
+Data scraped from [finalfantasy.wikia.com/wiki/License_Board](finalfantasy.wikia.com/wiki/License_Board)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+MIT software license: fork and go crazy.
