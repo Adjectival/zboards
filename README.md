@@ -45,3 +45,6 @@ DELETE
   "type": <string>,
   "cost": <string>
 }
+
+##### Test w CURL, before frontend built
+curl -H "Content-Type: application/json" -d '{"name":"Level UP!", "type":"intrinsic", "cost":"120m"}' http://shrouded-dusk-21205.herokuapp.com/api/licenses
