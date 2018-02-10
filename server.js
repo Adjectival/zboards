@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
 
-var CONTACTS_COLLECTION = "contacts";
+var CONTACTS_COLLECTION = "licenses";
 
 var app = express();
 app.use(bodyParser.json());
@@ -29,4 +29,31 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
   });
 });
 
-// API ROUTES
+// API ROUTES for LICENSES
+
+// Generic error handler for all endpoints' use
+function handleError(res, reason, message, code) {
+  console.log("ERROR: " + reason);
+  res.status(code || 500).json({"error": message});
+}
+
+/*  "/api/licenses"
+ *    GET: request all licenses
+ *    POST: create a new license
+ */
+
+ app.get("/api/licenses", function(req, res) {} );
+
+ app.post("/api/licenses", function(req, res) {} );
+
+ /*  "/api/licenses/:id"
+ *    GET: request license by id
+ *    PUT: update license by id
+ *    DELETE: delete license by id
+ */
+
+ app.get("/api/licenses/:id", function(req, res) {} );
+
+ app.put("/api/licenses/:id", function(req, res) {} );
+
+ app.delete("/api/licenses/:id", function(req, res) {} );

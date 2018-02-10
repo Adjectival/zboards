@@ -13,12 +13,27 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 MIT software license: fork and go crazy.
 
 
-##### MongoDB Notes for Dev :pill:
-###### Categories
-Magick
-Technick
-Weapon
-Armor
-Accessory
-Augment
-Summon
+#### MongoDB & Express Notes for Dev :pill:
+
+##### 5 endpoints
+/api/licenses
+GET
+POST
+
+/api/licenses/:id
+GET
+PUT
+DELETE
+
+##### 3 fields
+###### Name
+###### Type
+- Magick
+- Technick
+- Weapon
+- Armor
+- Accessory
+- Augment
+- Summon
+
+###### Cost
