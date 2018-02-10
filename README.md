@@ -37,3 +37,11 @@ DELETE
 - Summon
 
 ###### Cost
+
+##### Fields in JSON db object schema
+{
+  "_id": <ObjectId>,
+  "name": <string>,
+  "type": <string>,
+  "cost": <string>
+}

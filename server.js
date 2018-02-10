@@ -29,7 +29,8 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
   });
 });
 
-// API ROUTES for LICENSES
+
+// // API ROUTES for LICENSES // //
 
 // Generic error handler for all endpoints' use
 function handleError(res, reason, message, code) {
@@ -41,10 +42,30 @@ function handleError(res, reason, message, code) {
  *    GET: request all licenses
  *    POST: create a new license
  */
+ app.get("/api/licenses", function(req, res) {
+    db.collection(LICENSES_COLLECTION).find({}).toArray(function(err, docs) {
+        if (err) {
+            handleError(res, err.message, "Failed to GET licenses ;_;");
+        } else {
+            res.status(200).json(docs);
+        }
+    });
+ });
+ app.post("/api/licenses", function(req, res) {
+    var newLicense = req.body;
 
- app.get("/api/licenses", function(req, res) {} );
+    if (!req.body.name) {
+        handleError(res, "Bad input, please provide a name", 400);
+    }
 
- app.post("/api/licenses", function(req, res) {} );
+    db.collection(LICENSES_COLLECTION).insertOne(newLicense, function(err, doc) {
+        if (err) {
+            handleError(res, err.message, "Did not create new license ;_;");
+        } else {
+            res.status(201).json(doc.ops[0]);
+        }
+    });
+ });
 
  /*  "/api/licenses/:id"
  *    GET: request license by id
